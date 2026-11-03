@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SweatAi TV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="receiver.css">
+  <!-- Google Cast Application Framework (CAF) receiver SDK -->
+  <script src="https://www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
+</head>
+<body data-theme="vice">
+  <main class="screen">
+    <section class="media">
+      <div class="frame">
+        <img id="frame" alt="">
+        <span class="badge" id="progress">Waiting for your phone…</span>
+      </div>
+      <h1 id="name">SweatAi</h1>
+      <p class="tip" id="tip">Start a workout in TV mode on your phone.</p>
+    </section>
+
+    <aside class="panel">
+      <div class="card counter">
+        <p class="eyebrow" id="label">READY</p>
+        <p class="big" id="big">—</p>
+        <div class="bar"><div id="bar"></div></div>
+      </div>
+      <div class="card">
+        <p class="eyebrow muted">UP NEXT</p>
+        <ul id="next"></ul>
+      </div>
+      <p class="hint">Tap headphones or say “done” to log a rep · <span id="clock">0:00</span></p>
+    </aside>
+  </main>
+  <script src="receiver.js"></script>
+</body>
+</html>
